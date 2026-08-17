@@ -1,0 +1,10 @@
+[package]
+name = "rust_async_linkchecker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+regex = "1.13.1"
+reqwest = { version = "0.13.4", features = ["json"] }
+tokio = { version = "1.52.3", features = ["full"] }
+tokio-util = { version = "0.7.19", features = ["full"] }
