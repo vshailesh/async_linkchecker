@@ -57,11 +57,10 @@ async fn main() {
 }
 
 async fn find_links(links_queue: Arc<Mutex<VecDeque<String>>>) {
-    
     let curr_dir = std::env::current_dir().unwrap();
     let mut markdown_file_path = PathBuf::new();
     markdown_file_path.push(curr_dir);
-    markdown_file_path.push("twodomains.md");
+    markdown_file_path.push("input_links.md");
     let in_file = tokio::fs::File::open(markdown_file_path).await.unwrap();
     let mut buf_reader = tokio::io::BufReader::new(in_file);
 
